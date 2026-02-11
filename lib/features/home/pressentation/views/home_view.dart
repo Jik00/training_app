@@ -13,14 +13,13 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.scaffoldColor,
       appBar: AppBar(
+        backgroundColor: AppColors.scaffoldColor,
         title: const Text(
           AppStrings.appName,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
-      body: const Center(
-        child: HomeViewBody(),
-      ),
+      body: const HomeViewBody(),
     );
   }
 }

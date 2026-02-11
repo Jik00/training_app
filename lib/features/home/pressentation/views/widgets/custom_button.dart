@@ -5,14 +5,12 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.hint,
     this.onTap,
-    required this.w,
     this.fillColor,
     this.borderColor,
   });
 
   final String hint;
   final VoidCallback? onTap;
-  final double w;
   final Color? fillColor, borderColor;
 
   @override
@@ -23,9 +21,7 @@ class CustomButton extends StatelessWidget {
         backgroundColor: WidgetStateProperty.all(
           fillColor ?? Colors.transparent,
         ),
-        minimumSize: WidgetStateProperty.all(
-          Size(w, 40),
-        ),
+        fixedSize: WidgetStateProperty.all(const Size(350, 50)),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -40,7 +36,7 @@ class CustomButton extends StatelessWidget {
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 18,
-          color: Colors.white,
+          color: Colors.black,
         ),
       ),
     );
